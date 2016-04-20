@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<!--
+Author: Liam Sheppard
+Date: 20/4/2016
+Purpose: Simple page with an text input and a button.
+-->
+
+<head lang="en">
+    <meta charset='UTF-8' />
+    <title>Tandial Call Test</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class='wrapper'>
+        <img src="https://9032-presscdn-0-47-pagely.netdna-ssl.com/wp-content/uploads/2015/09/tanda_logo.png" class='logo'>
+        <h1>Test Caller</h1>
+        <label class='input-label' for='phone-number-input'>Phone Number</label>
+        <input type='tel' pattern='d{10}' name='phone-number-input' id='phone-number-input' class='form-input' autofocus='true' minlength='10' maxlength='10'>
+        <input type='submit' class='btn' value='Call'>
+    </div>
+</body>
+
+</html>
