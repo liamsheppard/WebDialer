@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dialer Thing</title>
+        <script src="sip.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <button id="startButton">Start Call</button>
+        <button id="endButton">End Call</button>
+        <input type="number" id="phoneNumber">Phone Number</body>
+
+        <script>
+            var config = {
+
+            uri: '484@128.199.94.236:8088',
+
+            wsServers: 'ws://128.199.94.236:8088',
+            hackIpInContact: true,
+            hackViaTcp: true,
+            hackWssInTransport: true,
+            traceSip: true,
+            authorizationUser: '484',
+            password: '#484Tanda',
+            };
+
+            var ua = new SIP.UA(config);
+            var session;
+
+            //here you determine whether the call has video and audio
+            var options = {
+                media: {
+                    constraints: {
+                         audio: true,
+                    },
+                }
+            };
+
+            var endButton = document.getElementById('endButton');
+            var startButton = document.getElementById('startButton');
+
+            startButton.addEventListener("click", function () {
+            //makes the call
+                var phoneNumber = document.getElementById('phoneNumber').value;
+                session = ua.invite('sip:' + phoneNumber + '@128.199.94.236', options);
+                alert("Call started");
+            }, false);
+
+            endButton.addEventListener("click", function () {
+            session.bye();
+            alert("Call Ended");
+            }, false);
+
+        </script>
+        
+    </body>
+</html>
