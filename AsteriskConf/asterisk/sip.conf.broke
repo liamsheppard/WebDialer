@@ -1,0 +1,43 @@
+[general]
+disallow=all
+allow=ulaw,alaw,gsm
+nat=force_rport,comedia
+qualify=yes
+dtmfmode=rfc2833
+transport=ws,wss,udp
+avpf=yes
+encryption=yes
+bindaddr=0.0.0.0
+register => 484:#484Tanda@tanda.telegate.net.au/484
+
+[provider]
+type=peer
+context=telegate-outbound
+host=tanda.telegate.net.au
+username=484
+secret=#484Tanda
+
+[484]
+type=peer
+;host=tanda.telegate.net.au
+host=dynamic
+fromuser=484
+fromdomain=tanda.telegate.net.au
+username=484
+secret=#484Tanda
+callerid="TanDial" <484>
+context=telegate-outbound
+transport=ws,wss,udp,tls
+avpf=yes
+encryption=yes
+
+
+icesupport=yes ; Tell Asterisk to use ICE for this peer
+directmedia=no ; Asterisk will relay media for this peer
+force_avp=yes ; Force Asterisk to use avp. Introduced in Asterisk 11.11
+dtlsenable=yes ; Tell Asterisk to enable DTLS for this peer
+dtlsverify=no ; Tell Asterisk to not verify your DTLS certs
+dtlscertfile=/etc/asterisk/keys/asterisk.pem ; Tell Asterisk where your DTLS cert file is
+dtlsprivatekey=/etc/asterisk/keys/asterisk.pem ; Tell Asterisk where your DTLS private key is
+idtlscafile=/etc/asterisk/keys/ca.crt
+dtlssetup=actpass ; Tell Asterisk to use actpass SDP parameter when setting up DTLS
