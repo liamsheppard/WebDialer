@@ -11,16 +11,14 @@
 
         <script>
             var config = {
-
-            uri: '484@128.199.94.236:8088',
-
-            wsServers: 'ws://128.199.94.236:8088',
-            hackIpInContact: true,
-            hackViaTcp: true,
-            hackWssInTransport: true,
-            traceSip: true,
-            authorizationUser: '484',
-            password: '#484Tanda',
+                uri: '484@128.199.94.236:8088',
+                wsServers: 'ws://128.199.94.236:8088/ws',
+                hackIpInContact: true,
+                hackViaTcp: true,
+                hackWssInTransport: true,
+                traceSip: true,
+                authorizationUser: '484',
+                password: '#484Tanda',
             };
 
             var ua = new SIP.UA(config);
@@ -41,13 +39,13 @@
             startButton.addEventListener("click", function () {
             //makes the call
                 var phoneNumber = document.getElementById('phoneNumber').value;
-                session = ua.invite('sip:' + phoneNumber + '@128.199.94.236', options);
+                session = ua.invite('sip:' + phoneNumber + '@tanda.telegate.net.au', options);
                 alert("Call started");
             }, false);
 
             endButton.addEventListener("click", function () {
-            session.bye();
-            alert("Call Ended");
+                session.bye();
+                alert("Call Ended");
             }, false);
 
         </script>
