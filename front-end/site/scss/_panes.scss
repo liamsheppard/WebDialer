@@ -1,0 +1,26 @@
+/*==============================================================================
+# PANES
+==============================================================================*/
+
+.pane-wrapper {
+    display: flex;
+    width: 100%;
+    height: calc( 100vh - 70px - 90px );
+}
+
+.pane {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.pane-side {
+    width: calc( 25% );
+    background: $t-lgrey;
+    padding: 45px;
+}
+
+.pane-centre {
+    width: 50%;
+    padding: 45px 8.33333%;
+}
