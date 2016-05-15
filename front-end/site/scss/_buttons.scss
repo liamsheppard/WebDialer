@@ -1,0 +1,24 @@
+/*==============================================================================
+# BUTTONS
+==============================================================================*/
+
+.btn {
+    display: block;
+    padding: 6px 10px;
+    text-align: center;
+}
+
+.btn-blue {
+    border: 1px solid $t-blue;
+    color: $t-blue;
+    transition: color 0.1s, background 0.1s;
+
+    &:hover {
+        color: $t-white;
+        background: $t-blue;
+    }
+}
+
+.btn-call {
+    width: 130px;
+}

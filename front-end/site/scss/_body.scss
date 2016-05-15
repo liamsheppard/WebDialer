@@ -9,6 +9,6 @@ body {
 }
 
 ::selection {
-    background: rgba(darken( $t-black, 1% ), 0.99);
+    background: rgba(darken( $t-blue, 10% ), 0.99);
     color: $t-white;
 }

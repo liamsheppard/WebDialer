@@ -1,11 +1,10 @@
 /*==============================================================================
 # PANES
 ==============================================================================*/
-
 .pane-wrapper {
     display: flex;
     width: 100%;
-    height: calc( 100vh - 70px - 90px );
+    height: calc( 100vh - 70px );
 }
 
 .pane {
@@ -23,4 +22,87 @@
 .pane-centre {
     width: 50%;
     padding: 45px 8.33333%;
+}
+
+
+/*------------------------------------------------------------------------------
+# LEFT PANE (CALLER INFORMATION)
+------------------------------------------------------------------------------*/
+.pane-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-info-wrapper {
+    display: flex;
+}
+
+.call-avatar {
+    display: block;
+    width: $callscreen-avatar-size;
+    height: $callscreen-avatar-size;
+    font-weight: 600;
+    color: $t-white;
+    font-size: 2.3em;
+    line-height: $callscreen-avatar-size;
+    text-align: center;
+}
+
+.call-name-button-wrapper {
+    display: block;
+    margin: 8px 0 8px 25px;
+}
+
+.call-name {
+    font-weight: 400;
+    color: $t-black;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.call-info-link {
+    display: block;
+    margin: 5px 0;
+    color: $t-blue;
+    transition: color 0.1s;
+    font-weight: 600;
+    font-size: 1.2em;
+
+    &:first-of-type {
+        margin: 30px 0 5px;
+    }
+
+    &:last-of-type {
+        margin: 5px 0 20px;
+    }
+
+    &:hover {
+        color: darken($t-blue, 12%);
+    }
+}
+
+.call-capsule-info-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    border-top: 1px solid rgba($t-grey, 0.2);
+    border-bottom: 1px solid rgba($t-grey, 0.2);
+}
+
+.call-capsule-info li {
+    color: $t-black;
+    font-size: 1em;
+    line-height: 150%;
+
+    &:first-of-type {
+        margin-top: 10px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .call-capsule-light {
+        color: $t-grey;
+        margin-right: 10px;
+    }
 }
