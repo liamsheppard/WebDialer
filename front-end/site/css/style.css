@@ -2499,7 +2499,7 @@ body {
   .call-capsule-info li .call-capsule-light {
     color: #aaaaaa;
     margin-right: 10px; }
-  .call-capsule-info li p {
+  .call-capsule-info li p:first-of-type {
     margin-top: 15px; }
   .call-capsule-info li hr {
     height: 1px;
