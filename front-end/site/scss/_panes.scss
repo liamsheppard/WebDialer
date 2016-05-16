@@ -1,0 +1,149 @@
+/*==============================================================================
+# PANES
+==============================================================================*/
+.pane-wrapper {
+    display: flex;
+    width: 100%;
+    height: calc( 100vh - 70px );
+}
+
+.pane {
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.pane-side {
+    width: calc( 25% );
+    background: $t-lgrey;
+    padding: 45px;
+}
+
+.pane-centre {
+    width: 50%;
+    padding: 45px 8.33333%;
+}
+
+
+/*------------------------------------------------------------------------------
+# SIDE PANES
+------------------------------------------------------------------------------*/
+.pane-left,
+.pane-centre {
+    display: flex;
+    flex-direction: column;
+}
+
+.call-info-wrapper {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.call-name-button-wrapper {
+    display: block;
+    margin: 8px 0 8px 25px;
+}
+
+.call-name {
+    font-weight: 400;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+.call-info-link {
+    display: block;
+    margin: 5px 0;
+    color: $t-blue;
+    transition: color 0.1s;
+    font-weight: 600;
+    font-size: 1.2em;
+
+    &:last-of-type {
+        margin: 5px 0 20px;
+    }
+
+    &:hover {
+        color: darken($t-blue, 12%);
+    }
+}
+
+.call-capsule-info-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    border-top: 1px solid rgba($t-grey, 0.2);
+    border-bottom: 1px solid rgba($t-grey, 0.2);
+    line-height: 1.5;
+}
+
+.call-capsule-info li {
+    font-size: 1em;
+
+    &:first-of-type {
+        margin-top: 10px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .call-capsule-light {
+        color: $t-grey;
+        margin-right: 10px;
+    }
+
+    p:first-of-type {
+        margin-top: 15px;
+    }
+
+    hr {
+        height: 1px;
+        width: 100%;
+        background: $t-grey;
+        margin: 20px 0;
+    }
+}
+
+.pane-right h3 {
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------
+# CENTRE PANE
+------------------------------------------------------------------------------*/
+.centre-heading-wrapper {
+    display: flex;
+    margin-bottom: 25px;
+
+    & div {
+        flex-grow: 1;
+    }
+}
+
+.pane-centre > h3 {
+    margin: 30px 0 15px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.centre-heading-right {
+    text-align: right;
+}
+
+.call-notes {
+    width: 100%;
+    resize: none;
+    line-height: 1.5;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid $t-grey;
+    color: $t-grey;
+    transition: color 0.1s, border 0.1s;
+
+    &:hover,
+    &:focus {
+        color: $t-black;
+        border: 1px solid $t-black;
+    }
+}

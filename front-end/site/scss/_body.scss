@@ -1,0 +1,15 @@
+/*==============================================================================
+# BODY
+==============================================================================*/
+
+body {
+    background: $t-white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: $t-black;
+}
+
+::selection {
+    background: rgba(darken( $t-blue, 10% ), 0.99);
+    color: $t-white;
+}
