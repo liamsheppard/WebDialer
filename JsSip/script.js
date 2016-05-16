@@ -1,10 +1,16 @@
 // Create our JsSIP instance and run it:
 
 var configuration = {
-  'ws_servers': 'ws://128.199.94.236:8088/ws', //128.199.94.236
-  'uri': 'sip:484@tanda.telegate.net.au:8088',
-  'password': '#484Tanda'
+  ws_servers: 'ws://128.199.94.236:8088/ws?KEY=password', //128.199.94.236
+  uri: 'sip:484@tanda.telegate.net.au:8088',
+  password: '#484Tanda',
+    realm: 'asterisk',
+    hack_via_ws: true,
+    hack_ip_in_contact: true,
+    hack_via_tcp: true,
+    traceSip:true,
 };
+JsSIP.debug.enable('JsSIP:*');
 
 var phone = new JsSIP.UA(configuration);
 
@@ -44,5 +50,5 @@ var options = {
   'mediaConstraints': {'audio': true}
 };
 
-
-session = phone.call('61457300571', options);
+alert("READY")
+session = phone.call('sip:61468799230@tanda.telegate.net.au:8088', options);
