@@ -6,12 +6,12 @@
     display: block;
     padding: 6px 10px;
     text-align: center;
+    transition: color 0.1s, background 0.1s;
 }
 
 .btn-blue {
     border: 1px solid $t-blue;
     color: $t-blue;
-    transition: color 0.1s, background 0.1s;
 
     &:hover {
         color: $t-white;
@@ -21,4 +21,14 @@
 
 .btn-call {
     width: 130px;
+}
+
+.btn-orange {
+    border: 1px solid $t-orange;
+    color: $t-orange;
+
+    &:hover {
+        color: $t-white;
+        background: $t-orange;
+    }
 }

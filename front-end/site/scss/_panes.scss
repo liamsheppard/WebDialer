@@ -26,26 +26,17 @@
 
 
 /*------------------------------------------------------------------------------
-# LEFT PANE (CALLER INFORMATION)
+# SIDE PANES
 ------------------------------------------------------------------------------*/
-.pane-left {
+.pane-left,
+.pane-centre {
     display: flex;
     flex-direction: column;
 }
 
 .call-info-wrapper {
     display: flex;
-}
-
-.call-avatar {
-    display: block;
-    width: $callscreen-avatar-size;
-    height: $callscreen-avatar-size;
-    font-weight: 600;
-    color: $t-white;
-    font-size: 2.3em;
-    line-height: $callscreen-avatar-size;
-    text-align: center;
+    margin-bottom: 25px;
 }
 
 .call-name-button-wrapper {
@@ -55,8 +46,7 @@
 
 .call-name {
     font-weight: 400;
-    color: $t-black;
-    font-size: 1.8em;
+    font-size: 1.7em;
     margin-bottom: 10px;
 }
 
@@ -67,10 +57,6 @@
     transition: color 0.1s;
     font-weight: 600;
     font-size: 1.2em;
-
-    &:first-of-type {
-        margin: 30px 0 5px;
-    }
 
     &:last-of-type {
         margin: 5px 0 20px;
@@ -86,12 +72,11 @@
     overflow-y: auto;
     border-top: 1px solid rgba($t-grey, 0.2);
     border-bottom: 1px solid rgba($t-grey, 0.2);
+    line-height: 1.5;
 }
 
 .call-capsule-info li {
-    color: $t-black;
     font-size: 1em;
-    line-height: 150%;
 
     &:first-of-type {
         margin-top: 10px;
@@ -104,5 +89,61 @@
     .call-capsule-light {
         color: $t-grey;
         margin-right: 10px;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+
+    hr {
+        height: 1px;
+        width: 100%;
+        background: $t-grey;
+        margin: 20px 0;
+    }
+}
+
+.pane-right h3 {
+    margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------
+# CENTRE PANE
+------------------------------------------------------------------------------*/
+.centre-heading-wrapper {
+    display: flex;
+    margin-bottom: 25px;
+
+    & div {
+        flex-grow: 1;
+    }
+}
+
+.pane-centre > h3 {
+    margin: 30px 0 15px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.centre-heading-right {
+    text-align: right;
+}
+
+.call-notes {
+    width: 100%;
+    resize: none;
+    line-height: 1.5;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid $t-grey;
+    color: $t-grey;
+    transition: color 0.1s, border 0.1s;
+
+    &:hover,
+    &:focus {
+        color: $t-black;
+        border: 1px solid $t-black;
     }
 }
