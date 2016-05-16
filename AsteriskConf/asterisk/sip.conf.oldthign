@@ -1,0 +1,21 @@
+[general]
+context=internal
+allowguest=no
+allowoverlap=no
+bindport=5060
+bindaddr=0.0.0.0
+srvloopup=no
+disallow=all
+allow=ulaw
+alwaysauthreject=yes
+canreinvite=yes
+nat=yes
+session-timers=refuse
+localnet=192.168.1.0/255.255.255.0
+
+[484]
+user=484
+secret=#484Tanda
+host=tanda.telegate.net.au
+host=dynamic
+callerid="TanDial" <484>
