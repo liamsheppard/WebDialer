@@ -147,3 +147,53 @@
         border: 1px solid $t-black;
     }
 }
+
+/*------------------------------------------------------------------------------
+# MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1600px) {
+    .call-name {
+        font-size: 1.5em;
+        margin: 10px 0 25px 70px;
+    }
+
+    .call-info-wrapper {
+        display: block;
+        position: relative;
+    }
+
+    .call-name-button-wrapper {
+        margin: 0;
+    }
+
+    .call-capsule-info li {
+        font-size: .9em;
+    }
+
+    .call-notes {
+        line-height: 1.4;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .centre-heading-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .pane-centre > h3 {
+        margin: 15px 0;
+    }
+
+    .pane-side {
+        padding: 30px;
+    }
+
+    .pane-centre {
+        padding: 30px 8.33333%;
+    }
+
+    .call-info-link {
+        font-size: 1em;
+    }
+}

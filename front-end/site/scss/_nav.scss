@@ -117,3 +117,32 @@
         }
     }
 }
+
+@media screen and (max-width: 1600px) {
+    .main-nav {
+        height: $nav-height-1600;
+    }
+
+    .nav-logo-container {
+        height: $nav-height-1600;
+
+        .nav-logo {
+            height: 16px;
+            width: auto;
+        }
+    }
+
+    .nav-user {
+        width: calc( 8.33333% + 50px );
+        .nav-user-signout {
+            width: calc( 100% - 50px );
+        }
+    }
+
+    .nav-links,
+    .nav-link,
+    .nav-user {
+        height: $nav-height-1600;
+        line-height: $nav-height-1600;
+    }
+}

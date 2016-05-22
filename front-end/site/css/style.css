@@ -2418,6 +2418,24 @@ body {
         color: #fcfcfc;
         background: #f7a007; }
 
+@media screen and (max-width: 1600px) {
+  .main-nav {
+    height: 50px; }
+  .nav-logo-container {
+    height: 50px; }
+    .nav-logo-container .nav-logo {
+      height: 16px;
+      width: auto; }
+  .nav-user {
+    width: calc( 8.33333% + 50px); }
+    .nav-user .nav-user-signout {
+      width: calc( 100% - 50px); }
+  .nav-links,
+  .nav-link,
+  .nav-user {
+    height: 50px;
+    line-height: 50px; } }
+
 /*==============================================================================
 # PANES
 ==============================================================================*/
@@ -2544,6 +2562,35 @@ body {
     color: #333333;
     border: 1px solid #333333; }
 
+/*------------------------------------------------------------------------------
+# MEDIA QUERIES
+------------------------------------------------------------------------------*/
+@media screen and (max-width: 1600px) {
+  .call-name {
+    font-size: 1.5em;
+    margin: 10px 0 25px 70px; }
+  .call-info-wrapper {
+    display: block;
+    position: relative; }
+  .call-name-button-wrapper {
+    margin: 0; }
+  .call-capsule-info li {
+    font-size: .9em; }
+  .call-notes {
+    line-height: 1.4;
+    padding: 10px;
+    font-size: 0.8em; }
+  .centre-heading-wrapper {
+    margin-bottom: 15px; }
+  .pane-centre > h3 {
+    margin: 15px 0; }
+  .pane-side {
+    padding: 30px; }
+  .pane-centre {
+    padding: 30px 8.33333%; }
+  .call-info-link {
+    font-size: 1em; } }
+
 /*==============================================================================
 # TYPOGRAPHY
 ==============================================================================*/
@@ -2555,6 +2602,12 @@ h3 {
   color: #aaaaaa;
   font-weight: 400;
   margin-bottom: 5px; }
+
+@media screen and (max-width: 1600px) {
+  h1 {
+    font-size: 1.6em; }
+  h3 {
+    font-size: 1em; } }
 
 /*==============================================================================
 # BUTTONS
@@ -2582,6 +2635,12 @@ h3 {
     color: #ffffff;
     background: #f9aa1e; }
 
+@media screen and (max-width: 1600px) {
+  .btn-call {
+    width: 110px;
+    font-size: 0.9em;
+    padding: 6px 10px; } }
+
 /*==============================================================================
 # AVATAR
 ==============================================================================*/
@@ -2601,3 +2660,16 @@ h3 {
 .nav-user-avatar {
   width: 70px;
   font-size: 26px; }
+
+@media screen and (max-width: 1600px) {
+  .call-avatar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3em;
+    line-height: 50px; }
+  .pane-right .call-avatar {
+    top: -10px; }
+  .nav-user-avatar {
+    width: 50px;
+    font-size: 1.3em; } }
