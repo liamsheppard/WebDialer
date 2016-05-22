@@ -2562,10 +2562,37 @@ body {
     color: #333333;
     border: 1px solid #333333; }
 
+.pane.pane-left.pane-side.admin {
+  overflow-y: auto; }
+
+/*------------------------------------------------------------------------------
+# ADMIN
+------------------------------------------------------------------------------*/
+.admin-team-wrapper {
+  border-left: 3px solid;
+  padding: 15px 0 0 20px;
+  margin-bottom: 30px;
+  background: #ffffff; }
+  .admin-team-wrapper .call-name {
+    margin-bottom: 0; }
+  .admin-team-wrapper .user-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px; }
+    .admin-team-wrapper .user-wrapper:hover {
+      background: #fcfcfc; }
+      .admin-team-wrapper .user-wrapper:hover .user-name {
+        color: #333333; }
+  .admin-team-wrapper .user-name-button-wrapper {
+    margin-left: 20px; }
+
 /*------------------------------------------------------------------------------
 # MEDIA QUERIES
 ------------------------------------------------------------------------------*/
 @media screen and (max-width: 1600px) {
+  .pane-wrapper {
+    height: calc(100vh - 50px); }
   .call-name {
     font-size: 1.5em;
     margin: 10px 0 25px 70px; }
@@ -2589,7 +2616,13 @@ body {
   .pane-centre {
     padding: 30px 8.33333%; }
   .call-info-link {
-    font-size: 1em; } }
+    font-size: 1em; }
+  .admin-team-wrapper .call-name {
+    margin-bottom: 0;
+    margin-left: 0; }
+  .admin-team-wrapper .user-name {
+    font-size: 1em;
+    margin: 0; } }
 
 /*==============================================================================
 # TYPOGRAPHY
@@ -2635,9 +2668,25 @@ h3 {
     color: #ffffff;
     background: #f9aa1e; }
 
+.admin-team-wrapper .btn-admin-user {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  font-size: 0.9em; }
+
+.admin-team-wrapper .btn-team {
+  margin-bottom: 20px; }
+
 @media screen and (max-width: 1600px) {
   .btn-call {
     width: 110px;
+    font-size: 0.9em;
+    padding: 6px 10px; }
+  .admin-team-wrapper .btn-admin-user {
+    margin: 3px 5px 0 0;
+    font-size: 0.8em;
+    padding: 4px 5px; }
+  .admin-team-wrapper .btn-team {
+    margin: 5px 0 15px;
     font-size: 0.9em;
     padding: 6px 10px; } }
 
@@ -2661,6 +2710,12 @@ h3 {
   width: 70px;
   font-size: 26px; }
 
+.admin-team-wrapper .user-avatar {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.5em; }
+
 @media screen and (max-width: 1600px) {
   .call-avatar {
     position: absolute;
@@ -2672,4 +2727,9 @@ h3 {
     top: -10px; }
   .nav-user-avatar {
     width: 50px;
+    font-size: 1.3em; }
+  .admin-team-wrapper .user-avatar {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     font-size: 1.3em; } }
