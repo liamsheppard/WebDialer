@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="preload.js"></script>
+        <script type="text/javascript" src="js/droplogo.js"></script>
+        <script type="text/javascript" src="usr_index.js"></script>
+        <script type="text/javascript" src="client_side_scripts.js"></script>
+        <script type="text/javascript" src="adrbook.js"></script>
+        <script type="text/javascript" src="usr_phone.js"></script>
+        <script type="text/javascript" src="js/rest.js"></script>
+        <script type="text/javascript" src="js/recs.js"></script>
+        <script type="text/javascript" src="js/core-min.js"></script>
+        <script type="text/javascript" src="js/sha256.js"></script>
+        <script type="text/javascript">
+          function initializeImage() {
+            loadLogoDropbox('dropbox', { '150x150': null });
+            var path = "/rest/domain/self/account/self"; // Global
+            loadCurrentImage('150x150', path + "/image/picture/150x150");
+          }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="dialed_number" style="border-radius:4px; box-shadow:#888888 2px 2px 1px; margin-bottom:10;"><br>
+        <input type="button" onclick="makecall2(true)" value="Call From Browser">
+    </body>
+</html>
