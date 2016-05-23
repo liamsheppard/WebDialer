@@ -21,3 +21,40 @@
     width: $nav-height;
     font-size: 26px;
 }
+
+.admin-team-wrapper {
+    .user-avatar {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .call-avatar {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+        line-height: 50px;
+    }
+
+    .pane-right .call-avatar {
+        top: -10px;
+    }
+
+    .nav-user-avatar {
+        width: $nav-height-1600;
+        font-size: 1.3em;
+    }
+
+    .admin-team-wrapper {
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.3em;
+        }
+    }
+}

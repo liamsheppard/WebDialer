@@ -32,3 +32,35 @@
         background: $t-orange;
     }
 }
+
+.admin-team-wrapper .btn-admin-user {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+    font-size: 0.9em;
+}
+
+.admin-team-wrapper .btn-team {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+    .btn-call {
+        width: 110px;
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+
+    .admin-team-wrapper {
+        .btn-admin-user {
+            margin: 3px 5px 0 0;
+            font-size: 0.8em;
+            padding: 4px 5px;
+        }
+
+        .btn-team {
+            margin: 5px 0 15px;
+            font-size: 0.9em;
+            padding: 6px 10px;
+        }
+    }
+}

@@ -147,3 +147,105 @@
         border: 1px solid $t-black;
     }
 }
+
+.pane.pane-left.pane-side.admin {
+    overflow-y: auto;
+}
+
+/*------------------------------------------------------------------------------
+# ADMIN
+------------------------------------------------------------------------------*/
+.admin-team-wrapper {
+    border-left: 3px solid;
+    padding: 15px 0 0 20px;
+    margin-bottom: 30px;
+    background: $t-white;
+
+    .call-name {
+        margin-bottom: 0;
+    }
+
+    .user-wrapper {
+        display: flex;
+        margin-bottom: 20px;
+
+        &:hover {
+            background: $t-lgrey;
+
+            .user-name {
+                color: $t-black;
+            }
+        }
+    }
+
+    .user-name-button-wrapper {
+        margin-left: 20px;
+    }
+}
+
+
+/*------------------------------------------------------------------------------
+# MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1600px) {
+    .pane-wrapper {
+        height: calc(100vh - 50px);
+    }
+
+    .call-name {
+        font-size: 1.5em;
+        margin: 10px 0 25px 70px;
+    }
+
+    .call-info-wrapper {
+        display: block;
+        position: relative;
+    }
+
+    .call-name-button-wrapper {
+        margin: 0;
+    }
+
+    .call-capsule-info li {
+        font-size: .9em;
+    }
+
+    .call-notes {
+        line-height: 1.4;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .centre-heading-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .pane-centre > h3 {
+        margin: 15px 0;
+    }
+
+    .pane-side {
+        padding: 30px;
+    }
+
+    .pane-centre {
+        padding: 30px 8.33333%;
+    }
+
+    .call-info-link {
+        font-size: 1em;
+    }
+
+    .admin-team-wrapper {
+        .call-name {
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+
+        .user-name {
+            font-size: 1em;
+            margin: 0;
+        }
+    }
+}
