@@ -14,6 +14,8 @@
             <label class='input-label' for='phone-number-input'>Phone Number</label>
             <input type='tel' pattern='d{10}' name='phone-number-input' id='dialed_number' class='form-input' autofocus='true' minlength='10' maxlength='10'>
             <input type='button' onclick="makecall2(true)" class='btn' value='Call'>
+            <audio id="remoteAudio" autoplay=""></audio>
+	       <div id='output' />
         </div>
     </body>
 </html>
