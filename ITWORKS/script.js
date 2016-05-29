@@ -1064,9 +1064,9 @@ function endcall(local, msg) {
 
   // Call Start/End Buttons
   var call_button_start = document.getElementById("call-btn");
-  call_button_start.classList.remove("hide");
+  call_button_start.classList.remove("btn-hide");
   var call_button_end = document.getElementById("endcall-btn");
-  call_button_end.classList.add("hide");
+  call_button_end.classList.add("btn-hide");
 }
 
 function openrecvcall() {
@@ -1141,9 +1141,9 @@ function makecall2(isCaller) {
 } else {
     // Call Start/End Buttons
     var call_button_start = document.getElementById("call-btn");
-    call_button_start.classList.add("hide");
+    call_button_start.classList.add("btn-hide");
     var call_button_end = document.getElementById("endcall-btn");
-    call_button_end.classList.remove("hide");
+    call_button_end.classList.remove("btn-hide");
 }
   redialNumber = dial_elem.value;
 
