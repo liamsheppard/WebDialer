@@ -192,7 +192,7 @@ function openChatbox(user) {
     $('#chat-messages-' + u).toggle();
     $('#chat-message-' + u).toggle();
   });
-  
+
   $(document.body).on('click', '#chat-close-'+u, function () {
     $('#chat-box-' + u).remove();
   });
@@ -292,7 +292,7 @@ function setViewSettings() {
   td.appendChild(p);
   tr.appendChild(td);
   tab.appendChild(tr);
-  
+
   for (var i = 0; i < allAccounts.length; i++) {
     var tr = document.createElement("tr");
     var td = document.createElement("td");
@@ -355,7 +355,7 @@ function setViewSettings() {
       cancelView();
     }
   });
-  
+
   var trans = getRest("/rest/system/translation/" + session.lang + "/usr_core_settings.htm,usr_index.js,-");
   var e = document.getElementById("ui-id-1");
   setInnerText(e, trans["usr_index.js#accountsview"]);
@@ -565,8 +565,8 @@ function onMessage(evt) {
   else if(msg.candidate) {
     //console.info(msg.candidate);
     //peercon.addIceCandidate(new RTCIceCandidate({ candidate: msg.candidate }));
-    peercon.addIceCandidate(new RTCIceCandidate({ candidate: msg.candidate, sdpMid:"", sdpMLineIndex:0 }), 
-      function() {}, 
+    peercon.addIceCandidate(new RTCIceCandidate({ candidate: msg.candidate, sdpMid:"", sdpMLineIndex:0 }),
+      function() {},
       function(error) { console.info("Candidate failed: " + JSON.stringify(error)); });
     return;
   }
@@ -831,9 +831,9 @@ function onMessage(evt) {
       //   else {
       //     ringing.appendChild(tr);
       //   }
-      //   // 
-      //   // 
-      //   // 
+      //   //
+      //   //
+      //   //
       // }
       // if(calls_tab.hasChildNodes()) {
       //   calls_tab.replaceChild(tab, calls_tab.childNodes[0]);
@@ -1061,6 +1061,12 @@ function endcall(local, msg) {
     if (typeof changetomakecall === "function")
       changetomakecall();
   }
+
+  // Call Start/End Buttons
+  var call_button_start = document.getElementById("call-btn");
+  call_button_start.classList.remove("hide");
+  var call_button_end = document.getElementById("endcall-btn");
+  call_button_end.classList.add("hide");
 }
 
 function openrecvcall() {
@@ -1127,13 +1133,20 @@ function makecall2(isCaller) {
   if(callStatus != IDLE) return;
   if(isCaller) callDir = CALLER;
   var dial_elem = document.getElementById("dialed_number");
+
   if (dial_elem.value === "") {
     endcall(true);
     alert("Enter a number to dial first.");
     return;
-  }
+} else {
+    // Call Start/End Buttons
+    var call_button_start = document.getElementById("call-btn");
+    call_button_start.classList.add("hide");
+    var call_button_end = document.getElementById("endcall-btn");
+    call_button_end.classList.remove("hide");
+}
   redialNumber = dial_elem.value;
-  
+
   //var DTLS = {"optional": [{'DtlsSrtpKeyAgreement': 'false'}]};
   var DTLS = {"optional": [{'DtlsSrtpKeyAgreement': 'true'}]};
   peercon = new webkitRTCPeerConnection({ "iceServers": [{ "url": "stun:stun.l.google.com:19302" }] }, DTLS);

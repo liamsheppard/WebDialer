@@ -122,7 +122,6 @@ h1 {
 .btn {
     display: block;
     margin: 40px 0 0;
-    background: #3fafd7;
     color: #fff;
     border: 0;
     padding: 14px;
@@ -131,8 +130,20 @@ h1 {
     transition: background 0.3s;
 }
 
-.btn:hover {
+.btn-start {
+    background: #3fafd7;
+}
+
+.btn-start:hover {
     background: #389bbe;
+}
+
+.btn-end {
+    background: #F9AA1E;
+}
+
+.btn-end:hover {
+    background: #e99f1c;
 }
 
 #output {
@@ -140,5 +151,9 @@ h1 {
 }
 
 table {
+    display: none;
+}
+
+.btn-hide {
     display: none;
 }
