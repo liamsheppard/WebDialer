@@ -154,14 +154,14 @@ function recvChatMsg(u, msg) {
 
   if (!document.hasFocus()) {
     if ("Notification" in window) {
-      if (Notification.permission !== 'denied') {
+      /*if (Notification.permission !== 'denied') {
         var chatnotify = new Notification(user.name, { icon: "rest/domain/self/account/" + user.account + "/image/picture/150x150?" + new Date().getTime(), body: msg });
         chatnotify.onclick = function () { window.focus(); };
         chatnotify.onclose = function () { };
         setTimeout(function () {
           chatnotify.close();
         }, 5000);
-      }
+      }*/
     }
   }
 }
@@ -451,10 +451,10 @@ function getUserElement(user) {
   img.id = "img:" + user.account;
   img.style.height = "40px";
   img.style.width = "40px";
-  if(refreshImages)
+  /*if(refreshImages)
     img.src = "rest/domain/self/account/" + user.account + "/image/picture/150x150?" + new Date().getTime();
   else
-    img.src = "rest/domain/self/account/" + user.account + "/image/picture/150x150";
+    img.src = "rest/domain/self/account/" + user.account + "/image/picture/150x150";*/
   td2.appendChild(img);
   tr2.appendChild(td2);
   td2 = document.createElement("td");
